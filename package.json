@@ -1,0 +1,40 @@
+{
+  "name": "qingloo-static",
+  "version": "0.0.1",
+  "description": "Qingloo is-a BBS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d-band/qingloo-static.git"
+  },
+  "files": [
+    "./index.js",
+    "./index.less",
+    "./p/**/index.js",
+    "./p/**/index.less"
+  ],
+  "externals": {
+    "jquery": "jQuery"
+  },
+  "scripts": {
+    "build": "dool build",
+    "package": "gulp"
+  },
+  "dependencies": {
+    "font-awesome": "^4.5.0"
+  },
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-shell": "^0.4.2",
+    "gulp-uglify": "^1.2.0"
+  },
+  "author": "d-band",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d-band/qingloo-static/issues"
+  },
+  "homepage": "https://github.com/d-band/qingloo-static",
+  "engines": {
+    "node": ">= 4"
+  }
+}

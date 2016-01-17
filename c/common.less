@@ -1,0 +1,41 @@
+.navbar-static-top {
+  margin-bottom: 30px;
+}
+.top-msg {
+  border-radius: 0;
+  border: none;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* Hack */
+.form-control {
+  border-color: #e4e4e4;
+  border-radius: 4px;
+  transition: border 300ms linear;
+  box-shadow: none;
+
+  &:focus {
+    border-color: #0ac2ff;
+    box-shadow: none;
+  }
+}
+.btn-default.disabled,
+.btn-default.disabled.active,
+.btn-default.disabled:active,
+.btn-default.disabled:focus,
+.btn-default.disabled:hover,
+.btn-default[disabled],
+.btn-default[disabled].active,
+.btn-default[disabled]:active,
+.btn-default[disabled]:focus,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default,
+fieldset[disabled] .btn-default.active,
+fieldset[disabled] .btn-default:active,
+fieldset[disabled] .btn-default:focus,
+fieldset[disabled] .btn-default:hover {
+  color: #59595a;
+  background-color: #eaecf6;
+  border-color: #d5d9ed;
+}
