@@ -48,7 +48,7 @@ var ajax = function(url, data, type) {
   return promise;
 };
 
-module.exports = {
+window.request = {
   get: get,
   post: post,
   ajax: ajax
