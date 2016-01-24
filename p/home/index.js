@@ -1,4 +1,4 @@
-var main = {
+const main = {
   init: function(){
     console.log('Home page');
   }

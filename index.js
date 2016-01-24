@@ -1,6 +1,5 @@
 // jQuery & Bootstrap
-var jQuery = require('jquery');
-window.jQuery = window.$ = jQuery;
+window.jQuery = window.$ = require('jquery');
 require('bootstrap');
 
 // Common

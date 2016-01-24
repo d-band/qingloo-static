@@ -1,6 +1,7 @@
-var data = require('./mods/data');
-var tpl = require('./mods/list.atpl');
-var main = {
+import data from './mods/data';
+import tpl from './mods/list.atpl';
+
+const main = {
   init: function() {
     $('.category-list').html(tpl({
       list: data
