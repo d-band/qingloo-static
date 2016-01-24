@@ -1,0 +1,10 @@
+<%for(var i=0;i<list.length;i++){var v=list[i];%>
+<div class="category-item">
+  <h5 class="category-title"><a href="#"><%=v.name%></a></h5>
+  <div class="sub-category-list">
+    <%for(var j=0;j<v.list.length;j++){%>
+    <a href="#"><%=v.list[j]%></a>
+    <%}%>
+  </div>
+</div>
+<%}%>
