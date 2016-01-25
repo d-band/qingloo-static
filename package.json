@@ -12,6 +12,9 @@
     "./p/**/index.js",
     "./p/**/index.less"
   ],
+  "externals": {
+    "jquery": "jQuery"
+  },
   "scripts": {
     "build": "dool build",
     "package": "gulp"
