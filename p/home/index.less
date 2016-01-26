@@ -1,89 +1,47 @@
-@import '../../c/palette';
-@import '../../c/variable';
-@banner-height: 100px;
-
 .banner {
-	height: @banner-height;
-	background-color: @grey;
-
-	.banner-content {
-	}
+  height: 160px;
+  line-height: 160px;
+  margin-bottom: 20px;
+  text-align: center;
 }
-section.hot-tb {
-	background-color: @light-grey;
+.hot-tb-media {
+  margin-bottom: 15px;
 
-	header {
-		background-color: @grey;
+  .hot-avatar {
+    &:hover {
+      text-decoration: none;
+    }
+    img {
+      width: 64px;
+      height: 64px;
+    }
+    .no-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 3px;
+      background-color: #11b063;
 
-		p {
-			font-size: @font-16;
-			font-weight: bold;
-			line-height: 30px;
-			margin-left: 4px;
-		}
-	}
-	.hot-tb-container {
-		.hot-tb-list-wrap {
-			margin-left: 0px;
-			padding-bottom: 10px;
-
-			.hot-tb-list {
-				margin-top: 10px;
-
-				img {
-					float: left;
-					width: 60px;
-					height: 60px;
-				}
-				.summary {
-					height: 60px;
-					margin-left: 66px;
-
-					.tb-name {
-						font-weight: bold;
-						font-size: @font-14;
-
-						a {
-							color: @blodcolor;
-							text-decoration: none;
-						}
-					}
-					.summary-info {
-						font-size: @font-14;
-					}
-				}
-			}
-		}
-	}
-}
-section.greatest-article {
-	background-color: @light-grey;
-	margin-top: 20px;
-
-	header {
-		background-color: @grey;
-
-		p {
-			font-size: @font-16;
-			font-weight: bold;
-			line-height: 30px;
-			margin-left: 4px;
-		}
-	}
-	.greatest-article-container {
-		// background-color: @light-grey;
-
-		.greatest-article-list-wrap {
-			padding-top: 6px;
-
-			.greatest-article-list {
-			}
-		}
-	}
-	.tb-about {
-		img {
-		}
-	}
-	.article-about {
-	}
+      &:after {
+        display: block;
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+        line-height: 64px;
+        content: "Q";
+      }
+    }
+  }
+  .media-body {
+    h5 {
+      margin-top: 5px;
+      font-weight: normal;
+    }
+    p {
+      color: #888;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
 }
