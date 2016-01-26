@@ -22,8 +22,7 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "cd-themify-icons": "0.0.1",
-    "font-awesome": "^4.5.0",
-    "jquery": "^1.12.0"
+    "font-awesome": "^4.5.0"
   },
   "devDependencies": {
     "del": "^1.2.0",
