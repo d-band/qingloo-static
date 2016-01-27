@@ -1,0 +1,17 @@
+<%for(var i=0;i<list.length;i++){var v=list[i];%>
+<div class="media hot-user-media">
+  <div class="media-left">
+    <a href="#" class="hot-avatar">
+      <%if(v.avatar){%>
+      <img src="<%=v.avatar%>" alt="<%=v.name%>">
+      <%}else{%>
+      <div class="no-avatar"></div>
+      <%}%>
+    </a>
+  </div>
+  <div class="media-body">
+    <h5 class="media-heading"><%=v.name%></h5>
+    <p><%=v.description%></p>
+  </div>
+</div>
+<%}%>

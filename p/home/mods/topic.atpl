@@ -1,0 +1,21 @@
+<%for(var i=0;i<list.length;i++){var v=list[i];%>
+<div class="media hot-topic-media">
+  <div class="media-left">
+    <a href="#" class="hot-avatar">
+      <%if(v.avatar){%>
+      <img src="<%=v.avatar%>" alt="<%=v.group%>">
+      <%}else{%>
+      <div class="no-avatar"></div>
+      <%}%>
+    </a>
+    <div class="topic-count">2300</div>
+  </div>
+  <div class="media-body">
+    <div class="topic-group">来自：<%=v.group%></div>
+    <div class="topic-title"><a href="#"><%=v.title%></a></div>
+    <div class="topic-desc">
+      <%=v.description%>
+    </div>
+  </div>
+</div>
+<%}%>
