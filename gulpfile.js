@@ -8,7 +8,7 @@ var pkg = require('./package.json');
 var join = require('path').join;
 
 gulp.task('clean', function(cb) {
-  del(['dist/**'], cb);
+  return del(['dist/**'], cb);
 });
 
 gulp.task('build', ['clean'], shell.task([
@@ -35,7 +35,7 @@ gulp.task('lib-js', ['copy'], function() {
 gulp.task('default', ['lib-js']);
 
 gulp.task('publish', ['lib-js'], function() {
-  gulp.src('package.json').pipe(prompt.prompt([{
+  return gulp.src('package.json').pipe(prompt.prompt([{
     type: 'input',
     name: 'accessKey',
     message: 'Please enter accessKey'
