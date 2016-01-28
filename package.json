@@ -1,5 +1,5 @@
 {
-  "name": "qingloo-static",
+  "name": "ql-static",
   "version": "0.0.1",
   "description": "Qingloo is-a BBS",
   "repository": {
@@ -27,6 +27,8 @@
   "devDependencies": {
     "del": "^1.2.0",
     "gulp": "^3.9.0",
+    "gulp-prompt": "^0.1.2",
+    "gulp-qiniu": "^0.2.1",
     "gulp-shell": "^0.4.2",
     "gulp-uglify": "^1.2.0"
   },
