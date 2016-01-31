@@ -43,12 +43,9 @@ gulp.task('publish', ['lib-js'], function() {
     type: 'input',
     name: 'secretKey',
     message: 'Please enter secretKey'
-  }, {
-    type: 'input',
-    name: 'bucket',
-    message: 'Please enter bucket'
   }], function(res) {
     res.private = false;
+    res.bucket = pkg.name;
     return gulp.src('dist/**').pipe(qiniu(res, {
       dir: join('/', pkg.name, pkg.version)
     }));
