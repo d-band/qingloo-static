@@ -1,52 +1,52 @@
-var SysError = '系统错误';
-var get = function(url, params) {
-  var promise = $.Deferred();
-  $.get(url, params).done(function(res) {
+const SysError = '系统错误';
+
+function _doneFn(promise) {
+  return function(res) {
     if (res && res.code === 0) {
       promise.resolve(res.data);
     } else {
       res.msg ? promise.reject(res.msg) : promise.reject(SysError);
     }
-  }).fail(function() {
-    promise.reject(SysError);
-  });
-  return promise;
-};
+  }
+}
 
-var post = function(url, params) {
-  var promise = $.Deferred();
-  $.post(url, params).done(function(res) {
-    if (res && res.code === 0) {
-      promise.resolve(res.data);
-    } else {
-      res.msg ? promise.reject(res.msg) : promise.reject(SysError);
-    }
-  }).fail(function() {
-    promise.reject(SysError);
-  });
-  return promise;
-};
+function _failFn(promise) {
+  return function(res) {
+    let json = res.responseJSON || {};
+    promise.reject(json.msg || SysError);
+  }
+}
 
-var ajax = function(url, data, type) {
+function get(url, params) {
+  let promise = $.Deferred();
+  $.get(url, params, null, 'json')
+    .done(_doneFn(promise))
+    .fail(_failFn(promise));
+  return promise;
+}
+
+function post(url, params) {
+  let promise = $.Deferred();
+  $.post(url, params, null, 'json')
+    .done(_doneFn(promise))
+    .fail(_failFn(promise));
+  return promise;
+}
+
+function ajax(url, data, type) {
   type = type || 'POST';
-  var promise = $.Deferred();
+  let promise = $.Deferred();
   $.ajax({
-    url: url,
-    type: type,
-    datatype: 'json',
-    contentType: 'application/json; charset=utf-8',
-    data: JSON.stringify(data)
-  }).done(function(res) {
-    if (res && res.code === 0) {
-      promise.resolve(res.data);
-    } else {
-      res.msg ? promise.reject(res.msg) : promise.reject(SysError);
-    }
-  }).fail(function() {
-    promise.reject(SysError);
-  });
+      url: url,
+      type: type,
+      dataType: 'json',
+      contentType: 'application/json; charset=utf-8',
+      data: JSON.stringify(data)
+    })
+    .done(_doneFn(promise))
+    .fail(_failFn(promise));
   return promise;
-};
+}
 
 window.request = {
   get: get,
