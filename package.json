@@ -20,10 +20,10 @@
     "package": "gulp"
   },
   "dependencies": {
-    "bootstrap": "^3.3.6",
-    "cd-themify-icons": "0.0.1",
-    "cd-toastr": "0.0.1",
-    "font-awesome": "^4.5.0"
+    "bootstrap": "~3.3.6",
+    "cd-themify-icons": "~0.0.1",
+    "cd-toastr": "~0.0.2",
+    "font-awesome": "~4.5.0"
   },
   "devDependencies": {
     "del": "^2.2.0",
